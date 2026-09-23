@@ -1,0 +1,183 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://player.gd" id="1_player"]
+[ext_resource type="Script" path="res://main.gd" id="2_main"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ground"]
+size = Vector2(1200, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_platform"]
+size = Vector2(200, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
+size = Vector2(32, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_plate"]
+size = Vector2(80, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_door"]
+size = Vector2(40, 130)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_goal"]
+size = Vector2(40, 60)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("2_main")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(600, 350)
+zoom = Vector2(1.2, 1.2)
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(600, 550)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("RectangleShape2D_ground")
+
+[node name="Visual" type="ColorRect" parent="Ground"]
+offset_left = -600.0
+offset_top = -25.0
+offset_right = 600.0
+offset_bottom = 25.0
+color = Color(0.35, 0.25, 0.2, 1)
+
+[node name="Platform1" type="StaticBody2D" parent="."]
+position = Vector2(300, 460)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1"]
+shape = SubResource("RectangleShape2D_platform")
+
+[node name="Visual" type="ColorRect" parent="Platform1"]
+offset_left = -100.0
+offset_top = -15.0
+offset_right = 100.0
+offset_bottom = 15.0
+color = Color(0.5, 0.35, 0.25, 1)
+
+[node name="Platform2" type="StaticBody2D" parent="."]
+position = Vector2(900, 460)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
+shape = SubResource("RectangleShape2D_platform")
+
+[node name="Visual" type="ColorRect" parent="Platform2"]
+offset_left = -100.0
+offset_top = -15.0
+offset_right = 100.0
+offset_bottom = 15.0
+color = Color(0.5, 0.35, 0.25, 1)
+
+[node name="Player1" type="CharacterBody2D" parent="."]
+position = Vector2(150, 480)
+collision_layer = 2
+collision_mask = 1
+script = ExtResource("1_player")
+player_id = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player1"]
+shape = SubResource("RectangleShape2D_player")
+
+[node name="Visual" type="ColorRect" parent="Player1"]
+offset_left = -16.0
+offset_top = -24.0
+offset_right = 16.0
+offset_bottom = 24.0
+color = Color(0.9, 0.2, 0.2, 1)
+
+[node name="Player2" type="CharacterBody2D" parent="."]
+position = Vector2(250, 480)
+collision_layer = 2
+collision_mask = 1
+script = ExtResource("1_player")
+player_id = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2"]
+shape = SubResource("RectangleShape2D_player")
+
+[node name="Visual" type="ColorRect" parent="Player2"]
+offset_left = -16.0
+offset_top = -24.0
+offset_right = 16.0
+offset_bottom = 24.0
+color = Color(0.2, 0.4, 0.9, 1)
+
+[node name="Plate1" type="Area2D" parent="."]
+position = Vector2(300, 445)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plate1"]
+shape = SubResource("RectangleShape2D_plate")
+
+[node name="Visual" type="ColorRect" parent="Plate1"]
+offset_left = -40.0
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+color = Color(0.9, 0.2, 0.2, 0.5)
+
+[node name="Plate2" type="Area2D" parent="."]
+position = Vector2(900, 445)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plate2"]
+shape = SubResource("RectangleShape2D_plate")
+
+[node name="Visual" type="ColorRect" parent="Plate2"]
+offset_left = -40.0
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+color = Color(0.2, 0.4, 0.9, 0.5)
+
+[node name="Door" type="StaticBody2D" parent="."]
+position = Vector2(600, 460)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+shape = SubResource("RectangleShape2D_door")
+
+[node name="Visual" type="ColorRect" parent="Door"]
+offset_left = -20.0
+offset_top = -65.0
+offset_right = 20.0
+offset_bottom = 65.0
+color = Color(0.8, 0.7, 0.1, 1)
+
+[node name="Goal" type="Area2D" parent="."]
+position = Vector2(1050, 495)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
+shape = SubResource("RectangleShape2D_goal")
+
+[node name="Visual" type="ColorRect" parent="Goal"]
+offset_left = -20.0
+offset_top = -30.0
+offset_right = 20.0
+offset_bottom = 30.0
+color = Color(0.9, 0.8, 0.2, 1)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="WinScreen" type="Control" parent="UI"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Dim" type="ColorRect" parent="UI/WinScreen"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.55)
+
+[node name="Label" type="Label" parent="UI/WinScreen"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -40.0
+offset_right = 200.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "YOU WIN!"
