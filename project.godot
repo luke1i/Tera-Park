@@ -1,0 +1,27 @@
+; Engine configuration file.
+; Format version: 4
+
+config_version=5
+
+[application]
+config/name="Tera Park"
+run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.3")
+config/icon="res://icon.svg"
+
+[input]
+left={
+"deadzone": 0.5,
+"events": [InputEventKey{"keycode":65}, InputEventKey{"keycode":4194319}]
+}
+right={
+"deadzone": 0.5,
+"events": [InputEventKey{"keycode":68}, InputEventKey{"keycode":4194321}]
+}
+jump={
+"deadzone": 0.5,
+"events": [InputEventKey{"keycode":32}, InputEventKey{"keycode":4194320}, InputEventKey{"keycode":87}, InputEventKey{"keycode":4194322}]
+}
+
+[physics]
+2d/default_gravity=2000

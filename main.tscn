@@ -1,0 +1,299 @@
+[gd_scene load_steps=7 format=3 uid="uid://tera"]
+
+[ext_resource type="Script" path="res://player.gd"]
+[ext_resource type="Script" path="res://main.gd"]
+[ext_resource type="Script" path="res://coin.gd"]
+
+[sub_resource type="RectangleShape2D" id="ground"]
+size = Vector2(2800, 100)
+
+[sub_resource type="RectangleShape2D" id="player"]
+size = Vector2(30, 40)
+
+[sub_resource type="RectangleShape2D" id="coin"]
+size = Vector2(25, 25)
+
+[sub_resource type="RectangleShape2D" id="goal"]
+size = Vector2(45, 60)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("3_main")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(1400, 650)
+
+[node name="Collision" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("ground")
+
+[node name="Visual" type="ColorRect" parent="Ground"]
+offset_left = -1400.0
+offset_top = -50.0
+offset_right = 1400.0
+offset_bottom = 50.0
+color = Color(0.545098, 0.376471, 0.2, 1)
+
+[node name="Platform1" type="StaticBody2D" parent="."]
+position = Vector2(350, 520)
+
+[node name="Collision" type="CollisionShape2D" parent="Platform1"]
+shape = SubResource("ground")
+scale = Vector2(0.35, 0.3)
+
+[node name="Visual" type="ColorRect" parent="Platform1"]
+offset_left = -350.0
+offset_top = -30.0
+offset_right = 350.0
+offset_bottom = 30.0
+scale = Vector2(0.35, 0.3)
+color = Color(0.627451, 0.509804, 0.415686, 1)
+
+[node name="Platform2" type="StaticBody2D" parent="."]
+position = Vector2(600, 480)
+
+[node name="Collision" type="CollisionShape2D" parent="Platform2"]
+shape = SubResource("ground")
+scale = Vector2(0.35, 0.3)
+
+[node name="Visual" type="ColorRect" parent="Platform2"]
+offset_left = -350.0
+offset_top = -30.0
+offset_right = 350.0
+offset_bottom = 30.0
+scale = Vector2(0.35, 0.3)
+color = Color(0.627451, 0.509804, 0.415686, 1)
+
+[node name="Platform3" type="StaticBody2D" parent="."]
+position = Vector2(850, 440)
+
+[node name="Collision" type="CollisionShape2D" parent="Platform3"]
+shape = SubResource("ground")
+scale = Vector2(0.35, 0.3)
+
+[node name="Visual" type="ColorRect" parent="Platform3"]
+offset_left = -350.0
+offset_top = -30.0
+offset_right = 350.0
+offset_bottom = 30.0
+scale = Vector2(0.35, 0.3)
+color = Color(0.627451, 0.509804, 0.415686, 1)
+
+[node name="Platform4" type="StaticBody2D" parent="."]
+position = Vector2(1100, 400)
+
+[node name="Collision" type="CollisionShape2D" parent="Platform4"]
+shape = SubResource("ground")
+scale = Vector2(0.35, 0.3)
+
+[node name="Visual" type="ColorRect" parent="Platform4"]
+offset_left = -350.0
+offset_top = -30.0
+offset_right = 350.0
+offset_bottom = 30.0
+scale = Vector2(0.35, 0.3)
+color = Color(0.627451, 0.509804, 0.415686, 1)
+
+[node name="Platform5" type="StaticBody2D" parent="."]
+position = Vector2(1350, 360)
+
+[node name="Collision" type="CollisionShape2D" parent="Platform5"]
+shape = SubResource("ground")
+scale = Vector2(0.35, 0.3)
+
+[node name="Visual" type="ColorRect" parent="Platform5"]
+offset_left = -350.0
+offset_top = -30.0
+offset_right = 350.0
+offset_bottom = 30.0
+scale = Vector2(0.35, 0.3)
+color = Color(0.627451, 0.509804, 0.415686, 1)
+
+[node name="Platform6" type="StaticBody2D" parent="."]
+position = Vector2(1600, 320)
+
+[node name="Collision" type="CollisionShape2D" parent="Platform6"]
+shape = SubResource("ground")
+scale = Vector2(0.35, 0.3)
+
+[node name="Visual" type="ColorRect" parent="Platform6"]
+offset_left = -350.0
+offset_top = -30.0
+offset_right = 350.0
+offset_bottom = 30.0
+scale = Vector2(0.35, 0.3)
+color = Color(0.627451, 0.509804, 0.415686, 1)
+
+[node name="Platform7" type="StaticBody2D" parent="."]
+position = Vector2(1850, 360)
+
+[node name="Collision" type="CollisionShape2D" parent="Platform7"]
+shape = SubResource("ground")
+scale = Vector2(0.35, 0.3)
+
+[node name="Visual" type="ColorRect" parent="Platform7"]
+offset_left = -350.0
+offset_top = -30.0
+offset_right = 350.0
+offset_bottom = 30.0
+scale = Vector2(0.35, 0.3)
+color = Color(0.627451, 0.509804, 0.415686, 1)
+
+[node name="Platform8" type="StaticBody2D" parent="."]
+position = Vector2(2100, 300)
+
+[node name="Collision" type="CollisionShape2D" parent="Platform8"]
+shape = SubResource("ground")
+scale = Vector2(0.35, 0.3)
+
+[node name="Visual" type="ColorRect" parent="Platform8"]
+offset_left = -350.0
+offset_top = -30.0
+offset_right = 350.0
+offset_bottom = 30.0
+scale = Vector2(0.35, 0.3)
+color = Color(0.627451, 0.509804, 0.415686, 1)
+
+[node name="Platform9" type="StaticBody2D" parent="."]
+position = Vector2(2350, 340)
+
+[node name="Collision" type="CollisionShape2D" parent="Platform9"]
+shape = SubResource("ground")
+scale = Vector2(0.35, 0.3)
+
+[node name="Visual" type="ColorRect" parent="Platform9"]
+offset_left = -350.0
+offset_top = -30.0
+offset_right = 350.0
+offset_bottom = 30.0
+scale = Vector2(0.35, 0.3)
+color = Color(0.627451, 0.509804, 0.415686, 1)
+
+[node name="Platform10" type="StaticBody2D" parent="."]
+position = Vector2(2600, 260)
+
+[node name="Collision" type="CollisionShape2D" parent="Platform10"]
+shape = SubResource("ground")
+scale = Vector2(0.35, 0.3)
+
+[node name="Visual" type="ColorRect" parent="Platform10"]
+offset_left = -350.0
+offset_top = -30.0
+offset_right = 350.0
+offset_bottom = 30.0
+scale = Vector2(0.35, 0.3)
+color = Color(0.627451, 0.509804, 0.415686, 1)
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(100, 500)
+script = ExtResource("1_player")
+
+[node name="Collision" type="CollisionShape2D" parent="Player"]
+shape = SubResource("player")
+
+[node name="Visual" type="ColorRect" parent="Player"]
+offset_left = -15.0
+offset_top = -20.0
+offset_right = 15.0
+offset_bottom = 20.0
+color = Color(1, 0.2, 0.2, 1)
+
+[node name="Coin1" type="Area2D" parent="."]
+position = Vector2(550, 420)
+script = ExtResource("3_coin")
+
+[node name="Collision" type="CollisionShape2D" parent="Coin1"]
+shape = SubResource("coin")
+
+[node name="Visual" type="ColorRect" parent="Coin1"]
+offset_left = -12.5
+offset_top = -12.5
+offset_right = 12.5
+offset_bottom = 12.5
+color = Color(1, 0.839216, 0, 1)
+
+[node name="Coin2" type="Area2D" parent="."]
+position = Vector2(1050, 320)
+script = ExtResource("3_coin")
+
+[node name="Collision" type="CollisionShape2D" parent="Coin2"]
+shape = SubResource("coin")
+
+[node name="Visual" type="ColorRect" parent="Coin2"]
+offset_left = -12.5
+offset_top = -12.5
+offset_right = 12.5
+offset_bottom = 12.5
+color = Color(1, 0.839216, 0, 1)
+
+[node name="Coin3" type="Area2D" parent="."]
+position = Vector2(1550, 260)
+script = ExtResource("3_coin")
+
+[node name="Collision" type="CollisionShape2D" parent="Coin3"]
+shape = SubResource("coin")
+
+[node name="Visual" type="ColorRect" parent="Coin3"]
+offset_left = -12.5
+offset_top = -12.5
+offset_right = 12.5
+offset_bottom = 12.5
+color = Color(1, 0.839216, 0, 1)
+
+[node name="Coin4" type="Area2D" parent="."]
+position = Vector2(2300, 260)
+script = ExtResource("3_coin")
+
+[node name="Collision" type="CollisionShape2D" parent="Coin4"]
+shape = SubResource("coin")
+
+[node name="Visual" type="ColorRect" parent="Coin4"]
+offset_left = -12.5
+offset_top = -12.5
+offset_right = 12.5
+offset_bottom = 12.5
+color = Color(1, 0.839216, 0, 1)
+
+[node name="Goal" type="Area2D" parent="."]
+position = Vector2(2650, 200)
+
+[node name="Collision" type="CollisionShape2D" parent="Goal"]
+shape = SubResource("goal")
+
+[node name="Visual" type="ColorRect" parent="Goal"]
+offset_left = -22.5
+offset_top = -30.0
+offset_right = 22.5
+offset_bottom = 30.0
+color = Color(0.2, 0.839216, 0.2, 1)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="CoinLabel" type="Label" parent="UI"]
+anchor_left = 0.05
+anchor_top = 0.05
+text = "Coins: 0"
+theme_override_font_sizes/font_size = 32
+
+[node name="WinLabel" type="Label" parent="UI"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -30.0
+offset_right = 150.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "YOU WIN!"
+
+[connection signal="body_entered" from="Goal" to="." method="_on_goal_reached"]
+[connection signal="body_entered" from="Coin1" to="Coin1" method="_on_body_entered"]
+[connection signal="body_entered" from="Coin2" to="Coin2" method="_on_body_entered"]
+[connection signal="body_entered" from="Coin3" to="Coin3" method="_on_body_entered"]
+[connection signal="body_entered" from="Coin4" to="Coin4" method="_on_body_entered"]
