@@ -1,7 +1,8 @@
 # Tera Park
 
-Tera Park is a small 2D platformer made in Godot 4. Move across platforms, dodge the spikes, and collect the coins on the way to the green goal. Touching a spike sends you back to the start.
-
+Tera park is this cool little thing that I made to try to be like Pico Park and not like pico park at the same time.
+I think this is pretty cool for a first Godot game!
+Thx <3
 ## Controls
 
 - **A / D** or **Left / Right arrows**: move
