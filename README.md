@@ -9,20 +9,12 @@ Tera Park is a small 2D platformer made in Godot 4. Move across platforms, dodge
 
 ## Play in the browser
 
-Demo: [PASTE YOUR ITCH.IO LINK HERE]
+Demo: https://urlocalcanadian.itch.io/tera-park
 
 ## Run it locally
 
-1. Install [Godot 4](https://godotengine.org/download) (4.3 or newer).
-2. Clone or download this repository.
-3. Open Godot, click **Import**, and select the `project.godot` file in this folder.
-4. Press **F5** (or the Play button) to run the game.
+1. Install Godot (https://godotengine.org/download) 
+2. Clone/download this repo
+3. Open Godot, click import, and select the project.godot file in this repo
+4. Press **F5** to play. 
 
-## Files
-
-- `project.godot`: project settings and input mapping
-- `main.tscn`: the main level, with platforms, spikes, coins, and the goal
-- `main.gd`: coin counter and win screen logic
-- `player.gd`: player movement and jumping
-- `coin.gd`: coin pickup behavior
-- `icon.svg`: project icon
